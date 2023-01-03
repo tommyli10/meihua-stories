@@ -1,0 +1,35 @@
+{
+  "name": "meihua-stories",
+  "version": "1.0.0",
+  "private": true,
+  "description": "meihua-stories",
+  "author": "tommyli97",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^5.2.0",
+    "gatsby-plugin-image": "^3.2.0",
+    "gatsby-plugin-manifest": "^5.3.1",
+    "gatsby-plugin-offline": "^6.3.1",
+    "gatsby-plugin-react-svg": "^3.3.0",
+    "gatsby-plugin-sass": "^6.2.0",
+    "gatsby-plugin-sharp": "^5.2.0",
+    "gatsby-source-filesystem": "^5.2.0",
+    "gatsby-transformer-remark": "^6.3.1",
+    "gatsby-transformer-sharp": "^5.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.56.2"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.1"
+  }
+}

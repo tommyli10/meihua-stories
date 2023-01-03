@@ -1,0 +1,7 @@
+# Ignore artifacts:
+.cache
+.gitignore
+public
+node_modules
+package.json
+package-lock.json

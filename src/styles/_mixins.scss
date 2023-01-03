@@ -1,0 +1,12 @@
+@mixin vertical-right-text {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+@mixin layout-hover-link {
+    text-decoration: line-through;
+    text-underline-offset: 5px;
+    background-color: $page-color;
+    color: $text-color;
+}

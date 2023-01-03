@@ -1,0 +1,19 @@
+// responsiveness break points
+$small: 500px;
+$medium: 760px;
+$large: 1000px;
+
+@mixin tablet {
+    @media (min-width: $medium) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $large) {
+        @content;
+    }
+}
+
+$page-color: #ffffff;
+$text-color: #383838;

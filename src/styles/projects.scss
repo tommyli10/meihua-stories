@@ -1,0 +1,123 @@
+@import "variables";
+@import "fonts";
+
+// styles for Project-Preview component at /work route
+.project-preview {
+    h1 {
+        font-size: 1.75em;
+        margin: 0.5em 0;
+    }
+    h1:first-child {
+        margin-top: 1em;
+    }
+    border-bottom: 1px solid $text-color;
+    h1:hover {
+        color: mix($text-color, #fff, 75%);
+    }
+    &:last-child {
+        border-bottom: 0;
+    }
+    @include tablet {
+        h1 {
+            font-size: 3em;
+        }
+    }
+}
+
+// styles for project template
+.project-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 3em;
+    padding-bottom: 1em;
+    @include tablet {
+        padding-bottom: 2em;
+    }
+}
+
+.project-title {
+    margin: 0;
+    @include tablet {
+        font-size: 3.5em;
+    }
+}
+
+.project-description {
+    font-size: 2em;
+    @include tablet {
+        font-size: 3em;
+    }
+    margin: 0;
+    color: mix($text-color, #fff, 75%);
+}
+
+.project-period {
+    font-size: 2em;
+    width: 100%;
+
+    @include tablet {
+        flex: 0 0 25%;
+    }
+}
+
+.project-text {
+    @include tablet {
+        flex: 0 0 75%;
+    }
+}
+
+.project-meta {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1em;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0 0 1em 0;
+        color: mix($text-color, #fff, 50%);
+        li {
+            font-family: "Gotham", sans-serif;
+            font-weight: 400;
+        }
+        @include tablet {
+            flex: 0 0 25%;
+        }
+    }
+    @include tablet {
+        flex-direction: row;
+        padding-bottom: 0;
+    }
+    .project-link {
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        @include tablet {
+            flex: 0 0 75%;
+        }
+    }
+}
+
+.project-text {
+    font-size: 1.1em;
+    padding-bottom: 1em;
+}
+
+.project-images {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-image-container {
+    padding-bottom: 2em;
+}
+
+.project-images img {
+    object-fit: cover;
+}
+
+.cousin {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}

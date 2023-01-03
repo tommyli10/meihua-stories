@@ -1,0 +1,272 @@
+@import "fonts";
+@import "variables";
+@import "mixins";
+
+body {
+    // max-height: 100vh;
+    // font-family: "Avenir", sans-serif;
+    font-family: "fzhei", sans-serif;
+    background-color: $page-color;
+    color: $text-color;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    @include tablet {
+        font-size: 16px;
+        margin: 3em 0;
+    }
+    @include desktop {
+        font-size: 16px;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: $text-color;
+    position: relative;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    &.button {
+        border: 2px solid $text-color;
+        display: inline-block;
+        padding: 0.5em 1em;
+        font-size: 1.2em;
+        transition: 0.4s background-color cubic-bezier(0.1, 0.8, 0.165, 1), 0.4s color cubic-bezier(0.1, 0.8, 0.165, 1);
+        margin-bottom: 0.75em;
+        text-align: center;
+    }
+    &:hover {
+        background-color: $text-color;
+        color: $page-color;
+    }
+    @include tablet {
+        font-size: 1.1em;
+    }
+}
+
+/* Layout components styles */
+.layout {
+    position: relative;
+}
+
+header {
+    z-index: 99;
+    height: 120px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 2.5em;
+    padding: 0 2em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    & > div {
+        @include vertical-right-text;
+    }
+    a {
+        padding-bottom: 0.25em;
+        &:hover {
+            @include layout-hover-link;
+        }
+    }
+    @include tablet {
+        font-size: 1.1em;
+    }
+}
+
+.content {
+    width: 100%;
+    margin-bottom: 150px;
+    position: relative;
+    padding: 8em 2em 0 2em;
+    z-index: 1;
+    background-color: $page-color;
+    align-items: center;
+    @include tablet {
+        margin-bottom: 150px;
+        flex-direction: row;
+    }
+}
+
+main {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+footer {
+    z-index: 0;
+    height: 130px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $text-color;
+    & > div {
+        @include vertical-right-text;
+    }
+    a {
+        padding-bottom: 0.25em;
+        background-color: $text-color;
+        color: $page-color;
+        &:hover {
+            @include layout-hover-link;
+            background-color: $text-color;
+            color: $page-color;
+        }
+    }
+    @include tablet {
+        padding-top: 1.5em;
+        padding-bottom: 0.75em;
+    }
+}
+
+/* Headers and Landing (Index) page styles */
+h1,
+h2,
+h3 {
+    line-height: 1em;
+}
+
+h1 {
+    font-size: 2.5em;
+    @include tablet {
+        font-size: 4em;
+    }
+}
+
+h2 {
+    font-size: 1.5em;
+    @include tablet {
+        font-size: 2em;
+    }
+}
+
+h3 {
+    font-size: 1.2em;
+    @include tablet {
+        font-size: 1.4em;
+    }
+}
+
+.headline {
+    max-width: 750px;
+    margin-bottom: 0;
+}
+
+.subtitles {
+    font-size: 1.4em;
+    font-weight: 400;
+    color: mix($text-color, #fff, 75%);
+    padding-bottom: 1em;
+    max-width: 600px;
+}
+
+.hero-links {
+    display: flex;
+    flex-direction: column;
+    a {
+        margin-bottom: 1em;
+    }
+    @include tablet {
+        flex-direction: row;
+        a {
+            margin-right: 1em;
+        }
+    }
+}
+
+// About page styles
+.about-intro-section,
+.experiences {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3em;
+    @include tablet {
+        flex-direction: row;
+    }
+}
+
+.profile-pic {
+    @include tablet {
+        flex: 0 0 25%;
+    }
+}
+
+.profile-summary {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    p {
+        margin: 0;
+        font-size: 1.2em;
+    }
+    @include tablet {
+        justify-content: space-between;
+        margin-left: 3em;
+        margin-top: 0;
+    }
+}
+
+.profile-links {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    a {
+        margin-bottom: 1em;
+    }
+    @include tablet {
+        flex-direction: row;
+        a {
+            margin-right: 1em;
+        }
+    }
+}
+
+.profile-topic {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    h2 {
+        margin: 0;
+    }
+    @include tablet {
+        justify-content: right;
+        flex: 0 0 25%;
+    }
+}
+
+.profile-section-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    p {
+        margin: 0;
+    }
+    ul {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+    }
+    li {
+        margin-bottom: 1em;
+    }
+    @include tablet {
+        justify-content: space-between;
+        margin-left: 3em;
+        margin-top: 0;
+    }
+}
