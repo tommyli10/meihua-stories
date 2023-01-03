@@ -5,7 +5,7 @@
 }
 
 @mixin layout-hover-link {
-    text-decoration: line-through;
+    text-decoration: underline;
     text-underline-offset: 5px;
     background-color: $page-color;
     color: $text-color;

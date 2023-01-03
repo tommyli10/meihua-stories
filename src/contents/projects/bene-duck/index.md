@@ -1,9 +1,8 @@
 ---
 title: 慈悲的斯波纳
-order: 3
+order: 5
 period: 2020
-slug: cowbow-coffee
-tech: [Content Strategy, Web Design, WordPress]
+slug: bene-duck
 ---
 
 在一个遥远的国度里，有只神仙鸭子名叫斯波纳。她的羽毛闪闪发光，象征着她的智慧和权力。
